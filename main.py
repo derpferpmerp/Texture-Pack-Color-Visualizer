@@ -1,7 +1,8 @@
 from Color import GColor
+import sys
 possible={"red":["c","[255, 85, 85]"],"aqua":["b","[85, 255, 255]"],"blue":["9","[85, 85, 255]"],"gold":["6","[255, 170, 0]"],"gray":["7","[170, 170, 170]"],"black":["0","[0, 0, 0]"],"green":["a","[85, 255, 85]"],"white":["f","[255, 255, 255]"],"yellow":["e","[255, 255, 85]"],"dark_red":["4","[170, 0, 0]"],"dark_aqua":["3","[0, 170, 170]"],"dark_blue":["1","[0, 0, 170]"],"dark_gray":["8","[85, 85, 85]"],"dark_green":["2","[0, 170, 0]"],"dark_purple":["5","[170, 0, 170]"],"light_purple":["d","[255, 85, 255]"]}
 print(u"Denote color codes with ? instead of \u00A7")
-userin=str(input("Input: "))
+userin=str(input("Input: ")) if len(sys.argv)-1==0 else sys.argv[1]
 lstvals=list([cc for cc in possible.values()])
 lstkeys=list([cc for cc in possible.keys()])
 argb=list([list(map(str.strip, g.strip('][').replace('"', '').split(','))) for g in list(([x[1] for x in lstvals]))])
