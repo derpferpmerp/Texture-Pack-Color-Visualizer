@@ -8,6 +8,10 @@ Installing Through Git:
 ```sh
 git clone https://github.com/derpferpmerp/Texture-Pack-Color-Visualizer.git;cd "Texture-Pack-Color-Visualizer";python3 main.py
 ```
+You can also either input after running the command (though python input) or supply the argument like this (although it doesn't like exclamation points):
+```sh
+python3 ./main.py "STRING"
+```
 
 # Notes:
 I have not currently included bug protection, but if you break it the program just won't work, so do with the program what you want, but understand it will only actually work if you use color codes that are currently allowed. I also plan to make this accept an actual file in the future.
