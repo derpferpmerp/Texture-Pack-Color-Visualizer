@@ -6,12 +6,7 @@ mcmetalist = list([
     if os.path.isfile(os.path.join("./MCMETA/", x))
     and x.split(".")[-1] == "mcmeta"
 ])
-lstdesc = list([[
-    __import__("json").loads(line)
-    for line in open(f"./MCMETA/{g}.mcmeta", 'r').read().split('\n')
-][0]["pack"]["description"] for g in list([
-    os.path.splitext(os.path.basename(f"./MCMETA/{n}"))[0] for n in mcmetalist
-])])
+lstdesc=list([[__import__("json").loads(line) for line in open(f"./MCMETA/{g}.mcmeta", 'r').read().split('\n')][0]["pack"]["description"] for g in list([os.path.splitext(os.path.basename(f"./MCMETA/{n}"))[0] for n in mcmetalist])])
 finallst = list([{
     os.path.splitext(
         os.path.basename(f"./MCMETA/{mcmetalist[lstdesc.index(k)]}"))[0]:
